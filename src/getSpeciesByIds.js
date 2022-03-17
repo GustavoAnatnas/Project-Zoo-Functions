@@ -5,7 +5,8 @@ const { species } = data;
 // console.log(species);
 
 function getSpeciesByIds(...ids) {
-  return ids.map((id) => species.find((spe) => spe.id === id));
+  const coletaEspecies = ids.map((id) => species.find((spe) => spe.id === id));
+  return coletaEspecies;
 }
 // const getId = species.map((spe) => `${spe.id} ${spe.location} ${spe.availability} ${spe.name}
 // ${spe.popularity}  ${spe.residents}`);
