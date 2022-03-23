@@ -8,5 +8,5 @@ function getOldestFromFirstSpecies(id) {
   const olderThan = resiAnimal.sort((a, b) => b.age - a.age);
   return [olderThan[0].name, olderThan[0].sex, olderThan[0].age];
 }
-console.log(getOldestFromFirstSpecies('56d43ba3-a5a7-40f6-8dd7-cbb05082383f'));
+// console.log(getOldestFromFirstSpecies());
 module.exports = getOldestFromFirstSpecies;
