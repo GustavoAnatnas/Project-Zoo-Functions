@@ -1,6 +1,5 @@
 const data = require('../data/zoo_data');
 
-const { prices } = data;
 function countEntrants(entrants) {
   return entrants.reduce((acc, cur) => {
     if (cur.age < 18) {
@@ -14,7 +13,15 @@ function countEntrants(entrants) {
 }
 
 function calculateEntry(entrants) {
-  // seu código aqui
+  if (entrants === undefined || Object.keys(entrants).length === 0) {
+    return 0;
+  }
+
+  const countEntrant = countEntrants(entrants);
+  const child = countEntrant.child * 20.99;
+  const adult = countEntrant.adult * 49.99;
+  const senior = countEntrant.senior * 24.99;
+  return child + adult + senior;
 }
 
 module.exports = { calculateEntry, countEntrants };
